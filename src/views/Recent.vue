@@ -1,23 +1,17 @@
 <script>
-import PostTile from "@/components/PostTile.vue";
+import PostTile from '@/components/PostTile.vue'
 
 export default {
   name: `Recent`,
-  data: function() {
-return {
-    posts: [
-      {id: 10039,
-      title: "apple",
-        author: "atishay Jain",
-        votes:99,
-      body: "I am Iron man"},
+  data: function () {
+    return {
+      posts: [
+        { id: 10039, title: 'apple', author: 'atishay Jain', votes: 99, body: 'I am Iron man' },
 
-      {id: 10039,
-        title: "apple",
-        body: "I am Iron man"}
-    ],
-  };
-},
+        { id: 10039, title: 'apple', body: 'I am Iron man' }
+      ]
+    }
+  },
   components: {
     PostTile // Register the PostTile component
   }
@@ -31,6 +25,4 @@ return {
   </div>
 </template>
 
-<style scoped>
-
-</style>
+<style scoped></style>

@@ -1,6 +1,6 @@
 <script>
 export default {
-  name: "PostTile",
+  name: 'PostTile',
   props: {
     post: Object // Prop to receive post data
   }
@@ -11,12 +11,12 @@ export default {
   <div class="post-tile">
     <router-link :to="'/post/' + post.id">
       <h2>{{ post.title }}</h2>
-      <h4>By {{post.author}}</h4>
+      <h4>By {{ post.author }}</h4>
       <p>{{ post.body }}</p>
       <div id="Bar">
-        <div>&#x1F44D;  {{post.likes}}</div>
-        <div>&#x1F44E;  {{post.dislikes}}</div>
-        <div>&#x1F4AC;  {{post.comments}}</div>
+        <div>&#x1F44D; {{ post.likes }}</div>
+        <div>&#x1F44E; {{ post.dislikes }}</div>
+        <div>&#x1F4AC; {{ post.comments }}</div>
       </div>
     </router-link>
   </div>
@@ -43,7 +43,7 @@ h4 {
 p {
   text-align: left;
 }
-#Bar{
+#Bar {
   width: 100%;
   padding-top: 8px;
   display: flex;

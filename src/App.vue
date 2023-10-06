@@ -1,7 +1,7 @@
 <template>
-  <Appbar/>
-  <Mainbar/>
-  <router-view/>
+  <Appbar />
+  <Mainbar />
+  <router-view />
 </template>
 
 <script>
@@ -10,9 +10,10 @@ import Mainbar from '@/components/Mainbar.vue'
 export default {
   name: 'App',
   components: {
-    Appbar, Mainbar
+    Appbar,
+    Mainbar
   },
-  mounted () {
+  mounted() {
     document.body.style.backgroundColor = '#27282c'
   }
 }
@@ -31,8 +32,8 @@ export default {
   height: 100vh;
   width: 80%;
 }
-@media only screen and (max-width: 820px){
-  #app{
+@media only screen and (max-width: 820px) {
+  #app {
     width: 95%;
   }
 }

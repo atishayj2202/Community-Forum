@@ -1,10 +1,33 @@
 <template>
   <div id="appbar1">
-    <div><a href="https://www.snapchat.com/add/atishayj2202" target="_blank" rel="noopener"><img src="../assets/snapchat.png" height="100%"></a></div>
-    <div><a href="https://www.facebook.com/atishayj2202/" target="_blank" rel="noopener"><img src="../assets/facebook.png" height="100%"></a></div>
-    <div><a href="https://www.github.com/atishayj2202/" target="_blank" rel="noopener"><img src="../assets/github.png" height="100%"></a></div>
-    <div><a href="https://www.instagram.com/atishayj2202/" target="_blank" rel="noopener"><img src="../assets/instagram.png" height="100%"></a></div>
-    <div><a href="https://open.spotify.com/playlist/6SqfIgBcbHrGnkK32nZSKQ?si=0t2KubNkS6WpO8KTln0MYg" target="_blank" rel="noopener"><img src="../assets/spotify.png" height="100%"></a></div>
+    <div>
+      <a href="https://www.snapchat.com/add/atishayj2202" target="_blank" rel="noopener"
+        ><img src="../assets/snapchat.png" height="100%"
+      /></a>
+    </div>
+    <div>
+      <a href="https://www.facebook.com/atishayj2202/" target="_blank" rel="noopener"
+        ><img src="../assets/facebook.png" height="100%"
+      /></a>
+    </div>
+    <div>
+      <a href="https://www.github.com/atishayj2202/" target="_blank" rel="noopener"
+        ><img src="../assets/github.png" height="100%"
+      /></a>
+    </div>
+    <div>
+      <a href="https://www.instagram.com/atishayj2202/" target="_blank" rel="noopener"
+        ><img src="../assets/instagram.png" height="100%"
+      /></a>
+    </div>
+    <div>
+      <a
+        href="https://open.spotify.com/playlist/6SqfIgBcbHrGnkK32nZSKQ?si=0t2KubNkS6WpO8KTln0MYg"
+        target="_blank"
+        rel="noopener"
+        ><img src="../assets/spotify.png" height="100%"
+      /></a>
+    </div>
   </div>
 </template>
 
@@ -29,9 +52,9 @@ export default {
   padding: 0px;
   height: 90%;
 }
-#appbar1{
+#appbar1 {
   width: 100%;
-  height:3vh;
+  height: 3vh;
   padding-top: 8px;
   display: flex;
   justify-content: space-evenly;

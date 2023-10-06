@@ -1,7 +1,7 @@
 <template>
   <div id="appbar1">
     <div>
-      <router-link to="/"><img src="../assets/logo.png" style="height: 80px" ></router-link>
+      <router-link to="/"><img src="../assets/logo.png" style="height: 80px" /></router-link>
     </div>
     <div class="bigger">
       <ul>
@@ -24,7 +24,6 @@
       </div>
     </div>
   </div>
-
 </template>
 
 <script>
@@ -59,7 +58,7 @@ li {
   float: left;
 }
 
-li a{
+li a {
   display: inline-block;
   color: white;
   text-align: center;
@@ -67,15 +66,15 @@ li a{
   text-decoration: none;
 }
 
-li a:hover{
-  background-color: #41B883;
+li a:hover {
+  background-color: #41b883;
   color: white;
 }
 
-li{
+li {
   display: inline-block;
 }
-#appbar1{
+#appbar1 {
   width: 100%;
   height: 12vh;
   display: flex;
@@ -90,8 +89,8 @@ li{
   z-index: 1;
   top: 0;
   left: 0;
-  background-color: rgb(0,0,0);
-  background-color: rgba(0,0,0, 0.9);
+  background-color: rgb(0, 0, 0);
+  background-color: rgba(0, 0, 0, 0.9);
   overflow-x: hidden;
   transition: 0.5s;
 }
@@ -114,7 +113,8 @@ li{
   transition: 0.3s;
 }
 
-.overlay a:hover, .overlay a:focus {
+.overlay a:hover,
+.overlay a:focus {
   color: #f1f1f1;
 }
 
@@ -124,29 +124,30 @@ li{
   right: 45px;
   font-size: 60px;
 }
-.xyz{
+.xyz {
   background-color: black;
   color: white;
   height: 80px;
   width: 80px;
-  font-size: 30px;display: flex;
+  font-size: 30px;
+  display: flex;
   justify-content: center;
   align-items: center;
 }
-.smaller{
+.smaller {
   visibility: hidden;
   width: 0;
   display: none;
 }
 @media only screen and (max-width: 820px) {
-  .bigger{
+  .bigger {
     visibility: hidden;
     width: 0;
     display: none;
   }
-  .smaller{
+  .smaller {
     visibility: visible;
-    width : auto;
+    width: auto;
     display: flex;
   }
 }
