@@ -6,7 +6,7 @@
     <div class="bigger">
       <ul>
         <li><router-link to="/">Recent</router-link></li>
-        <li><router-link to="/post">Post</router-link></li>
+        <li><router-link to="/new">New Post</router-link></li>
         <li><router-link to="/profile">Profile</router-link></li>
       </ul>
     </div>
@@ -18,7 +18,7 @@
         <a href="javascript:void(0)" class="closebtn" @click="closeNav('')">X</a>
         <div class="overlay-content">
           <a @click="closeNav('/')">Recent</a>
-          <a @click="closeNav('/post')">Post</a>
+          <a @click="closeNav('/new')">New Post</a>
           <a @click="closeNav('/profile')">Profile</a>
         </div>
       </div>

@@ -5,7 +5,17 @@ export default {
   name: `Recent`,
   data: function() {
 return {
-    posts: [],
+    posts: [
+      {id: 10039,
+      title: "apple",
+        author: "atishay Jain",
+        votes:99,
+      body: "I am Iron man"},
+
+      {id: 10039,
+        title: "apple",
+        body: "I am Iron man"}
+    ],
   };
 },
   components: {
