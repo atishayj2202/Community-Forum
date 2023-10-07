@@ -12,11 +12,15 @@ export default {
     }
   },
   created() {
-    const postId = this.$route.params.id;
+    const postId = this.$route.params.id
     console.log(postId)
-    this.post = {title : "Atishay Jain", body:"Hello Atishay, how are you??", author:"Tony stark"}
-    this.comments.push({text:"Atishay is Great", author : "Tony Stark"})
-    this.comments.push({text:"Atishay is Great", author : "Tony Stark"})
+    this.post = {
+      title: 'Atishay Jain',
+      body: 'Hello Atishay, how are you??',
+      author: 'Tony stark'
+    }
+    this.comments.push({ text: 'Atishay is Great', author: 'Tony Stark' })
+    this.comments.push({ text: 'Atishay is Great', author: 'Tony Stark' })
   }
 }
 </script>
@@ -25,14 +29,17 @@ export default {
   <div>
     <!-- Display the post data here -->
     <h1>{{ post.title }}</h1>
-    <h4>By {{ post.author }}</h4><br>
-    <p>{{ post.body }}</p><br><br><br>
+    <h4>By {{ post.author }}</h4>
+    <br />
+    <p>{{ post.body }}</p>
+    <br /><br /><br />
 
     <div id="Bar">
       <div>&#x1F44D; {{ post.likes }}</div>
       <div>&#x1F4AC; {{ post.comments }}</div>
       <div>&#x1F44E; {{ post.dislikes }}</div>
-    </div><br><br><br>
+    </div>
+    <br /><br /><br />
 
     <h3>Comments</h3>
     <div v-for="comment in comments" :key="comment.id" class="comment">
@@ -45,13 +52,16 @@ export default {
       <h3>Add a Comment</h3>
       <form @submit.prevent="addComment">
         <div class="form-group">
-          <label for="commentText">Comment:</label>
-          <textarea id="commentText" v-model="newComment.text" required></textarea>
+          <textarea
+            id="commentText"
+            v-model="newComment.text"
+            required
+            placeholder="Comment"
+          ></textarea>
         </div>
         <button type="submit">Add Comment</button>
       </form>
     </div>
-
   </div>
 </template>
 
@@ -102,14 +112,14 @@ button:hover {
   color: white;
 }
 
-textarea{
+textarea {
   color: white;
   background-color: #34495e;
   font-size: 20px;
   border: 3px solid #41b883;
   padding: 5px;
   margin: 5px;
-  width: 50%;
+  width: 70%;
   font-weight: bold;
 }
 </style>

@@ -26,7 +26,7 @@ export default {
 .post-tile {
   border: 1px solid #ffffff1a;
   padding: 10px 20px;
-  margin: 10px 0px 0px;
+  margin: 10px 0 0;
   cursor: pointer; /* Add cursor pointer for hover effect */
 }
 a {
@@ -34,7 +34,7 @@ a {
   text-decoration: none;
 }
 .post-tile:hover {
-  background-color: #ffffff1a;/* Add hover effect with background color change */
+  background-color: #ffffff1a; /* Add hover effect with background color change */
 }
 h4 {
   text-align: right;
