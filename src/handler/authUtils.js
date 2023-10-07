@@ -22,6 +22,6 @@ export function authUser() {
   return { status: false }
 }
 
-export function deleteCookie() {
+export function deleteUser() {
   document.cookie = 'uid' + '=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/;'
 }
