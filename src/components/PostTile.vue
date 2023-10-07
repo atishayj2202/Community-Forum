@@ -15,8 +15,8 @@ export default {
       <p>{{ post.body }}</p>
       <div id="Bar">
         <div>&#x1F44D; {{ post.likes }}</div>
-        <div>&#x1F44E; {{ post.dislikes }}</div>
         <div>&#x1F4AC; {{ post.comments }}</div>
+        <div>&#x1F44E; {{ post.dislikes }}</div>
       </div>
     </router-link>
   </div>
@@ -26,7 +26,6 @@ export default {
 .post-tile {
   border: 1px solid #ffffff1a;
   padding: 10px 20px;
-  color: white;
   margin: 10px 0px 0px;
   cursor: pointer; /* Add cursor pointer for hover effect */
 }
@@ -35,7 +34,7 @@ a {
   text-decoration: none;
 }
 .post-tile:hover {
-  background-color: #ffffff1a; /* Add hover effect with background color change */
+  background-color: #ffffff1a;/* Add hover effect with background color change */
 }
 h4 {
   text-align: right;
