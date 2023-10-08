@@ -3,16 +3,17 @@ export default {
   name: 'ProfileView',
   data() {
     return {
-      username: "John", // Replace with the actual username or retrieve it from your authentication system
-    };
-  },
+      username: 'John' // Replace with the actual username or retrieve it from your authentication system
+    }
+  }
 }
 </script>
 
 <template>
   <div>
     <h1>You have logged in successfully</h1>
-    <p>Hi, {{ username }}</p><br><br><br><br>
+    <p>Hi, {{ username }}</p>
+    <br /><br /><br /><br />
     <button class="sign-out-button" @click="signOut">Sign Out</button>
   </div>
 </template>

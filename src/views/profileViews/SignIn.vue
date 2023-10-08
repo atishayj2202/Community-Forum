@@ -6,7 +6,8 @@ export default {
 
 <template>
   <div>
-    <h1>Please Log In First</h1><br><br><br><br>
+    <h1>Please Log In First</h1>
+    <br /><br /><br /><br />
     <button @click="loginWithGoogle" class="login-button">Sign In/Up with Google</button>
   </div>
 </template>
