@@ -11,12 +11,12 @@ export default {
   <div class="post-tile">
     <router-link :to="'/post/' + post.id">
       <h2>{{ post.title }}</h2>
-      <h4>By {{ post.author }}</h4>
+      <h4>By {{ post.author_name }}</h4>
       <p>{{ post.body }}</p>
       <div id="Bar">
         <div>&#x1F44D; {{ post.likes }}</div>
         <div>&#x1F4AC; {{ post.comments }}</div>
-        <div>&#x1F44E; {{ post.dislikes }}</div>
+        <div>&#x1F44E; {{ post.unlikes }}</div>
       </div>
     </router-link>
   </div>

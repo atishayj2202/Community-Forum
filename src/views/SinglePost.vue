@@ -1,5 +1,6 @@
 <script>
-// eslint-disable-next-line vue/no-export-in-script-setup
+import axios from "axios";
+
 export default {
   name: 'PostTile',
   data: function () {
@@ -11,17 +12,23 @@ export default {
       }
     }
   },
-  created() {
-    const postId = this.$route.params.id
-    console.log(postId)
-    this.post = {
-      title: 'Atishay Jain',
-      body: 'Hello Atishay, how are you??',
-      author: 'Tony stark'
-    }
-    this.comments.push({ text: 'Atishay is Great', author: 'Tony Stark' })
-    this.comments.push({ text: 'Atishay is Great', author: 'Tony Stark' })
-  }
+  mounted() {
+    // Make a POST request using Axios
+    axios
+        .post('https://server.yellowbush-cadc3844.centralindia.azurecontainerapps.io/post/get_single_post/?pid=' + this.$route.params.id)
+        .then(response => {
+          try {
+            const parsedData = JSON.parse(response.data);
+            this.post = ((parsedData.Data)[0])
+            console.log(((parsedData.Data)[0]))
+          } catch (error) {
+            console.error('Error parsing JSON:', error);
+          }
+        })
+        .catch(error => {
+          console.error('Error fetching data:', error);
+        });
+  },
 }
 </script>
 
@@ -29,7 +36,7 @@ export default {
   <div>
     <!-- Display the post data here -->
     <h1>{{ post.title }}</h1>
-    <h4>By {{ post.author }}</h4>
+    <h4>By {{ post.author_name }}</h4>
     <br />
     <p>{{ post.body }}</p>
     <br /><br /><br />
@@ -37,7 +44,7 @@ export default {
     <div id="Bar">
       <div>&#x1F44D; {{ post.likes }}</div>
       <div>&#x1F4AC; {{ post.comments }}</div>
-      <div>&#x1F44E; {{ post.dislikes }}</div>
+      <div>&#x1F44E; {{ post.unlikes }}</div>
     </div>
     <br /><br /><br />
 

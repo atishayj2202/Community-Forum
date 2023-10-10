@@ -1,20 +1,36 @@
 <script>
 import PostTile from '@/components/PostTile.vue'
+import axios from 'axios';
+
 
 export default {
   name: `Recent`,
   data: function () {
     return {
       posts: [
-        { id: 10039, title: 'apple', author: 'atishay Jain', votes: 99, body: 'I am Iron man' },
-
-        { id: 10039, title: 'apple', body: 'I am Iron man' }
       ]
     }
   },
   components: {
     PostTile // Register the PostTile component
-  }
+  },
+  mounted() {
+    // Make a POST request using Axios
+    axios
+        .post('https://server.yellowbush-cadc3844.centralindia.azurecontainerapps.io/post/get_all_post/')
+        .then(response => {
+          try {
+            const parsedData = JSON.parse(response.data);
+            this.posts = parsedData.Data
+          } catch (error) {
+            console.error('Error parsing JSON:', error);
+          }
+        })
+        .catch(error => {
+          console.error('Error fetching data:', error);
+        });
+  },
+
 }
 </script>
 
