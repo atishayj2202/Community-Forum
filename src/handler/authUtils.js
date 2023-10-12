@@ -16,7 +16,7 @@ export function authUser() {
   for (let i = 0; i < cookies.length; i++) {
     const cookie = cookies[i].split('=')
     if (cookie[0] === 'uid') {
-      return { status: false, uid: decodeURIComponent(cookie[1]) }
+      return { status: true, uid: decodeURIComponent(cookie[1]).toString() }
     }
   }
   return { status: false }
