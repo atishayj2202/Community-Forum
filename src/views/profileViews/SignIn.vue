@@ -1,14 +1,48 @@
 <script>
+import {getAuth, signInWithPopup, GoogleAuthProvider} from "firebase/auth";
+import {saveUser} from "@/handler/authUtils";
+import axios from "axios";
+
 export default {
-  name: 'SignIn'
+  name: 'SignIn',
+  methods: {
+    loginWithGoogle() {
+      const provider = new GoogleAuthProvider();
+      const auth = getAuth();
+      signInWithPopup(auth, provider)
+          .then((result) => {
+            // The signed-in user info.
+            const user = result.user;
+            const data = {
+              name: user.displayName.toString(),
+              uid: user.uid.toString()
+            }
+            axios.post("https://server.yellowbush-cadc3844.centralindia.azurecontainerapps.io/user/create_user/",null, {params: data}).then((response) => {
+              const parsedData = JSON.parse(response.data);
+              saveUser(parsedData.Data.toString())
+              window.location.reload()
+            }).catch((error) => {
+              console.log(error)
+            })
+            // IdP data available using getAdditionalUserInfo(result)
+            // ...
+          }).catch((error) => {
+        // Handle Errors here.
+        const errorCode = error.code;
+        const errorMessage = error.message;
+        console.log(errorCode + errorMessage)
+        // ...
+      });
+    }
+  }
 }
 </script>
 
 <template>
   <div>
     <h1>Please Log In First</h1>
-    <br /><br /><br /><br />
-    <button @click="loginWithGoogle" class="login-button">Sign In/Up with Google</button>
+    <br/><br/><br/><br/>
+    <button class="login-button" @click="loginWithGoogle">Sign In/Up with Google</button>
   </div>
 </template>
 
