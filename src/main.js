@@ -1,19 +1,19 @@
 import { createApp } from 'vue'
 import App from './App.vue'
 import router from './router'
-import * as firebase from 'firebase/app'
-import 'firebase/auth' // Import the Firebase Authentication module
+import { initializeApp } from "firebase/app";
 
 const firebaseConfig = {
-    apiKey: 'YOUR_API_KEY',
-    authDomain: 'YOUR_AUTH_DOMAIN',
-    projectId: 'YOUR_PROJECT_ID',
-    storageBucket: 'YOUR_STORAGE_BUCKET',
-    messagingSenderId: 'YOUR_MESSAGING_SENDER_ID',
-    appId: 'YOUR_APP_ID'
-}
+    apiKey: "AIzaSyAm2AJHY6HNYFHyDh5gAPPu5ef2kv-Lgss",
+    authDomain: "community-forum-401517.firebaseapp.com",
+    projectId: "community-forum-401517",
+    storageBucket: "community-forum-401517.appspot.com",
+    messagingSenderId: "902466457382",
+    appId: "1:902466457382:web:fcae325223905777207be7"
+};
 
-firebase.initializeApp(firebaseConfig)
+initializeApp(firebaseConfig);
+
 
 const app = createApp(App)
 

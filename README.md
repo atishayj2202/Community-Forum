@@ -1,14 +1,11 @@
-# gdsc
+# Forum Website
 
-This template should help get you started developing with Vue 3 in Vite.
+Welcome to the client-side of our modern Forum Website. This website is built with Vue.js and utilizes Firebase, Axios, and Cookies for a dynamic and user-friendly experience.
 
-## Recommended IDE Setup
+## User Authentication
 
-[VSCode](https://code.visualstudio.com/) + [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar) (and disable Vetur) + [TypeScript Vue Plugin (Volar)](https://marketplace.visualstudio.com/items?itemName=Vue.vscode-typescript-vue-plugin).
+Firebase Authentication is used to enable seamless Google Sign-In. Be sure to configure Firebase according to your project's needs.
 
-## Customize configuration
-
-See [Vite Configuration Reference](https://vitejs.dev/config/).
 
 ## Project Setup
 
