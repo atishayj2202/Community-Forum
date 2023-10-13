@@ -15,7 +15,7 @@ export default {
         params : {id : temp.uid}
       }).then((response) => {
         const parsedData = JSON.parse(response.data);
-        console.log(parsedData)
+        console.log(parsedData.Data)
         this.username = (parsedData.Data).name
       }).catch((error) => {
         console.log(error)
