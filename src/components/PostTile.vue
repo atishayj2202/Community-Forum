@@ -3,16 +3,6 @@ export default {
   name: 'PostTile',
   props: {
     post: Object // Prop to receive post data
-  },
-  computed: {
-    limit_body () {
-      if (this.post.body.length >= 200){
-        return (this.post.body.slice(0, 200) + "...")
-      }
-      else {
-        return (this.post.body)
-      }
-    }
   }
 }
 </script>
@@ -22,7 +12,7 @@ export default {
     <router-link :to="'/post/' + post.id">
       <h2>{{ post.title }}</h2>
       <h4>By {{ post.author_name }}</h4>
-      <p>{{ limit_body }}</p>
+      <p>{{ post.body }}</p>
       <div id="Bar">
         <div>&#x1F44D; {{ post.likes }}</div>
         <div>&#x1F4AC; {{ post.comments }}</div>

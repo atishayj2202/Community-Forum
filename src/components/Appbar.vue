@@ -1,13 +1,13 @@
 <template>
   <div id="appbar1">
     <div>
-      <a href="https://github.com/atishayj2202/Forum-Backend" target="_blank" rel="noopener"
-        ><img src="../assets/github.png" height="100%"
+      <a href="https://www.snapchat.com/add/atishayj2202" target="_blank" rel="noopener"
+        ><img src="../assets/snapchat.png" height="100%"
       /></a>
     </div>
     <div>
-      <a href="https://www.linkedin.com/in/atishaya-jain-5215b7169/" target="_blank" rel="noopener"
-        ><img src="../assets/linkedin.png" height="100%"
+      <a href="https://www.facebook.com/atishayj2202/" target="_blank" rel="noopener"
+        ><img src="../assets/facebook.png" height="100%"
       /></a>
     </div>
     <div>
@@ -22,10 +22,10 @@
     </div>
     <div>
       <a
-        href="https://github.com/atishayj2202/Community-Forum"
+        href="https://open.spotify.com/playlist/6SqfIgBcbHrGnkK32nZSKQ?si=0t2KubNkS6WpO8KTln0MYg"
         target="_blank"
         rel="noopener"
-        ><img src="../assets/github.png" height="100%"
+        ><img src="../assets/spotify.png" height="100%"
       /></a>
     </div>
   </div>

@@ -21,13 +21,7 @@ export default {
         .then(response => {
           try {
             const parsedData = JSON.parse(response.data);
-            if (parsedData.Status === "Error" || parsedData.Status === "Not Success"){
-              this.posts = []
-              alert("No Post Found")
-            }
-            else{
-              this.posts = parsedData.Data
-            }
+            this.posts = parsedData.Data
           } catch (error) {
             console.error('Error parsing JSON:', error);
           }
