@@ -38,23 +38,26 @@ export default {
           .then(response => {
             try {
               const parsedData = JSON.parse(response.data);
-              this.post = ((parsedData.Data)[0])
+              if (parsedData.Status === "Error" || parsedData.Status === "Not Success") {
+                alert("Wrong Post ID Selected")
+              }
+              else{
+                this.post = ((parsedData.Data)[0])
+                axios
+                    .post('https://server.yellowbush-cadc3844.centralindia.azurecontainerapps.io/reaction/get_comments/?pid=' + this.$route.params.id)
+                    .then(response => {
+                      try {
+                        const parsedData = JSON.parse(response.data);
+                        this.comments = ((parsedData.Data))
 
-              axios
-                  .post('https://server.yellowbush-cadc3844.centralindia.azurecontainerapps.io/reaction/get_comments/?pid=' + this.$route.params.id)
-                  .then(response => {
-                    try {
-                      const parsedData = JSON.parse(response.data);
-                      this.comments = ((parsedData.Data))
-
-                    } catch (error) {
-                      console.error('Error parsing JSON:', error);
-                    }
-                  })
-                  .catch(error => {
-                    console.error('Error fetching data:', error);
-                  });
-
+                      } catch (error) {
+                        console.error('Error parsing JSON:', error);
+                      }
+                    })
+                    .catch(error => {
+                      console.error('Error fetching data:', error);
+                    });
+              }
             } catch (error) {
               console.error('Error parsing JSON:', error);
             }
