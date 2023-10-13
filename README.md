@@ -6,6 +6,9 @@ Welcome to the client-side of our modern Forum Website. This website is built wi
 
 Firebase Authentication is used to enable seamless Google Sign-In. Be sure to configure Firebase according to your project's needs.
 
+### Hosting - Azure Static Web App
+### Link - https://thankful-mushroom-0eb6b5d00.4.azurestaticapps.net
+
 
 ## Project Setup
 
