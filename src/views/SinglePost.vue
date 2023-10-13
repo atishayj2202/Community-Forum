@@ -74,7 +74,7 @@ export default {
           author_id : temp.uid,
           body: this.newComment.body
         }
-        axios.post("https://server.yellowbush-cadc3844.centralindia.azurecontainerapps.io/reaction/add_comment/", data).then((response) => {
+        axios.post("https://server.yellowbush-cadc3844.centralindia.azurecontainerapps.io/reaction/add_comment/",null, {params: data}).then((response) => {
           if (response.data.status === "Error") {
             alert("Unexpected Error")
           }
@@ -82,7 +82,7 @@ export default {
             this.init()
           }
         }).catch((error) =>{
-          alert("Unexpected Error")
+          alert(error)
         })
       }
     }

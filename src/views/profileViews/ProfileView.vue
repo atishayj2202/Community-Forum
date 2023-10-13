@@ -1,9 +1,34 @@
 <script>
+import {authUser, deleteUser} from "@/handler/authUtils";
+import axios from "axios";
 export default {
   name: 'ProfileView',
   data() {
     return {
-      username: 'John' // Replace with the actual username or retrieve it from your authentication system
+      username: 'Loading' // Replace with the actual username or retrieve it from your authentication system
+    }
+  },
+  mounted() {
+    const temp = authUser()
+    if (temp.status){
+      axios.post("https://server.yellowbush-cadc3844.centralindia.azurecontainerapps.io/user/get_user/", null, {
+        params : {id : temp.uid}
+      }).then((response) => {
+        const parsedData = JSON.parse(response.data);
+        console.log(parsedData)
+        this.username = (parsedData.Data).name
+      }).catch((error) => {
+        console.log(error)
+      })
+    }
+    else {
+      window.location.reload()
+    }
+  },
+  methods: {
+    signOut() {
+      deleteUser()
+      window.location.reload()
     }
   }
 }
