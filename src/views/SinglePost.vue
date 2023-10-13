@@ -48,8 +48,12 @@ export default {
                     .then(response => {
                       try {
                         const parsedData = JSON.parse(response.data);
-                        this.comments = ((parsedData.Data))
-
+                        if (parsedData.Status === "Error" || parsedData.Status === "Not Success") {
+                          this.comments = []
+                        }
+                        else {
+                          this.comments = ((parsedData.Data))
+                        }
                       } catch (error) {
                         console.error('Error parsing JSON:', error);
                       }
